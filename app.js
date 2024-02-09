@@ -50,14 +50,14 @@ app.use(cartRoutes);
 
 
 
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect("mongodb+srv://milanbhalla1999:27LxYkZQjhZr2Iwk@mernshop.m6si84p.mongodb.net/?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
     .then((conn) => {
         //myConnection = conn   
         console.log('Connected to MongoDB Atlas')
-        app.listen(process.env.PORT);
+        app.listen(8080);
     }
     )
     .catch(err => console.error('Error connecting', err));
